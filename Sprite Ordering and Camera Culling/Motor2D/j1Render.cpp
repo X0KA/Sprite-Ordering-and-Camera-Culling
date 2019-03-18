@@ -303,6 +303,7 @@ bool j1Render::DrawCircle(int x, int y, int radius, Uint8 r, Uint8 g, Uint8 b, U
 //This fucntions create a new element for the Queue with the info of the class ImageRender
 void j1Render::Push(uint order,SDL_Texture* tex, int x, int y, const SDL_Rect* section, float scale, float speed, double angle, int pivot_x, int pivot_y)
 {
+	//TODO 1: Create a function that creates a new element for the Queue with the info of the class ImageRender
 	SDL_Rect r;
 	r.x = x;
 	r.y = y;

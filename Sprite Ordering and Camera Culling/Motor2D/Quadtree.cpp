@@ -63,6 +63,7 @@ int Quadtree::getIndex(const SDL_Rect& r){
 }
 
 bool Quadtree::insert(ImageRender* obj){
+	//TODO 3: Create the insert function
 	if (obj == nullptr){
 		return false;
 	}
