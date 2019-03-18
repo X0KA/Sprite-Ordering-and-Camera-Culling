@@ -19,14 +19,16 @@ When making a 2.5D game, for example, we need to create the feeling that the gam
 
 Doing it manually is a really easy option if you have few sprites that you are going to print but when in a game there are dozens of entities that we need to print, it becomes a nearly impossible task to do by hand, and that's where automatic sprite ordering systems help us.
 
-<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda1.png"></p>
-*zelda 2.5D game: in front of a tree*
+*zelda 2.5D game:*
 
-<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda2.png"></p>
-*zelda 2.5D game: behind a tree*
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda1.png"></p>
+<p align="center"> in front of a tree </p>
 
-<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda3.png"></p>
-*zelda 2.5D game: Y difference*
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda2.png"></p>
+<p align="center"> behind a tree </p>
+
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda3.png"></p>
+<p align="center"> Y axis difference </p>
 
 ### How do we control the sprite ordering automaticlly in c++?
 
@@ -41,7 +43,9 @@ To do that we will be using the standard template library, which is going to let
 The priority_queue will need 3 parameters:
 
 **1. Type of elements in the queue.**
+
 **2. Type of container to store the data.**
+
 **3. A binary predicate that takes two elements (of type T) as arguments and returns a bool.**
 
 the syntaxis will look something like that:
@@ -54,7 +58,9 @@ Before implementing our priority queue we will hae to create a class  that will 
 After doing that we will be able to implement the priority_queue with our 3 parameters:
 
 **1. The class that we created.**
+
 **2. A vecotr of the class that we created.**
+
 **3. The struct that we created with the boolean opperator.**
 
 With that we will be able to order our sprites, the only thing that is left to do is to create 2 functions.
@@ -133,7 +139,7 @@ Once we have the quadtree class we can start to implement it in the  camera cull
 
 [StackOverflow ddiscussion with sprite ordering idea](https://stackoverflow.com/questions/11002811/sorting-objects-by-y-value-before-rendering)
 
-[images of legend of zelda] (https://eliasdaler.wordpress.com/2013/11/20/z-order-in-top-down-2d-games/)
+[images of legend of zelda](https://eliasdaler.wordpress.com/2013/11/20/z-order-in-top-down-2d-games)
 
 [Cplusplus priority_queue wiki](http://www.cplusplus.com/reference/queue/priority_queue/)
 
