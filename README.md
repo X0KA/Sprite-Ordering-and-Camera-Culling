@@ -21,7 +21,7 @@ Doing it manually is a really easy option if you have few sprites that you are g
 
 *zelda 2.5D game:*
 
-<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda1.png"></p>
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda1.jpg"></p>
 <p align="center"> in front of a tree </p>
 
 <p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda2.png"></p>
