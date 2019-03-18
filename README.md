@@ -5,7 +5,7 @@ I am [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/), student of the [Ba
 
 # Sprite Ordering and Camera Culling
 
-In this website you will find information about how to create Sprite Ordering and Camera Culling effects for 2.5D game. You can also visit the main github repository page where you will be able to find 2 Visual Studio projects, 1 Withe the Camera Culling and Sprite ORdering systems fully implemented and another one with some parts missing to help you practice.
+In this website you will find information about how to create Sprite Ordering and Camera Culling effects for 2.5D game. You can also visit the main github repository page where you will be able to find 2 Visual Studio projects, 1 Withe the Camera Culling and Sprite Ordering systems fully implemented and another one with some parts missing to help you practice.
 
 ## Sprite Ordering
 
@@ -53,7 +53,7 @@ the syntaxis will look something like that:
 std::priority_queue <class T, class Container = vector<T>, class Compare = less<typename Container::value_type> > name;
 ```
 
-Before implementing our priority queue we will hae to create a class  that will be the elements with all the data that we are going to print and a struct with a boolean opperator that will compare 2 elements form the class that we previously created and will return true or false according to our priority condition.
+Before implementing our priority queue we will have to create a class  that will be the elements with all the data that we are going to print and a struct with a boolean opperator that will compare 2 elements form the class that we previously created and will return true or false according to our priority condition.
 
 After doing that we will be able to implement the priority_queue with our 3 parameters:
 
@@ -71,9 +71,11 @@ After that is done we will have our sprite ordering system.
 
 ### Results
 
+Now we should be able to see our sprites rendered as we wanted.
+
 ### Useful Links
 
-**[Isometric sorting:]()**
+**[Isometric sorting:](https://gamedev.stackexchange.com/questions/8151/how-do-i-sort-isometric-sprites-into-the-correct-order)**
 
 ## Camera Culling
 
@@ -89,7 +91,7 @@ As we mentioned before, Camera Culling is a way to optimize the game, by using t
 
 ### How do we create a camera culling effect in our game?
 
-To create a camera culling effect in our game is pretty simple, we hust have to select what we want to render. To do that we are just going to add a filter to our rendering system, this filter will check if something is outside the camera or not and once it has determined if its inside the camera or not, it will be rendered or not.
+To create a camera culling effect in our game is pretty simple, we must have to select what we want to render. To do that we are just going to add a filter to our rendering system, this filter will check if something is outside the camera or not and once it has determined if its inside the camera or not, it will be rendered or not.
 
 In order to do that we will have to implement a filter similar to the next one and apply it to the render function or the function that pushes the elements into the priority class if you have done the sprite ordering system before:
 
@@ -123,16 +125,20 @@ In order to reduce that amount of operations we can implement something called s
 Inside the quadtree we will need 5 functions:
 
 **Clear():** This function deletes all the elements inside the nodes.
+
 **Split():**	This functions is in charge of dividing the actual node into 4 nodes when the actual node has reached it's maximum number of elements.
+
 **Insert():** This function inserts every element in it's corresponding node.
+
 **PushCollisionVector:** This function checks which elements the will have to be checked according to the element passed.
+
 **IfInside()** Checks if a rectangle is inside another one.
 
 Once we have the quadtree class we can start to implement it in the  camera culling, to do so, we have to Initialize a quadtree with a rect of the size of the map or the are where we want to  aply it. Then we have to insert all the entities and finally call the pushcollisionvector with the camera rectangle. This way, it will check which elements are inside the camera and it will return them in a list, and that list will be the elements that will have to be printed. 
 
 ### Results
 
-
+Now we should be able to only render things inside the camera in an efficent way.
 
 ### Useful links
 
