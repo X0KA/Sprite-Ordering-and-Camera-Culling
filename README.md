@@ -75,7 +75,7 @@ Now we should be able to see our sprites rendered as we wanted.
 
 ### Useful Links
 
-**[Isometric sorting:](https://gamedev.stackexchange.com/questions/8151/how-do-i-sort-isometric-sprites-into-the-correct-order)**
+**[Sprites sorting: maths for Isometric view](https://gamedev.stackexchange.com/questions/8151/how-do-i-sort-isometric-sprites-into-the-correct-order)**
 
 ## Camera Culling
 
