@@ -21,6 +21,10 @@ Doing it manually is a really easy option if you have few sprites that you are g
 
 *zelda 2.5D game:*
 
+<p align="center">
+  <img src="https://github.com/DLorenzoLaguno17/TDD/blob/master/docs/doomGDD.JPG?raw=true" alt="Github branches" width="450" height="578">
+</p>
+
 <p align="center"><img src="https://github.com/DLorenzoLaguno17/TDD/blob/master/docs/doomGDD.JPG?raw=true""></p>
 <p align="center"> in front of a tree </p>
 
