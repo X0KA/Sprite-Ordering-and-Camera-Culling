@@ -19,14 +19,16 @@ When making a 2.5D game, for example, we need to create the feeling that the gam
 
 Doing it manually is a really easy option if you have few sprites that you are going to print but when in a game there are dozens of entities that we need to print, it becomes a nearly impossible task to do by hand, and that's where automatic sprite ordering systems help us.
 
+*zelda 2.5D game:*
+
 <p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda1.png"></p>
-<p align="center"> zelda 2.5D game: in front of a tree </p>
+<p align="center"> in front of a tree </p>
 
 <p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda2.png"></p>
-<p align="center"> zelda 2.5D game: behind a tree </p>
+<p align="center"> behind a tree </p>
 
 <p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/master/docs/zelda3.png"></p>
-<p align="center"> zelda 2.5D game: Y difference </p>
+<p align="center"> Y axis difference </p>
 
 ### How do we control the sprite ordering automaticlly in c++?
 
