@@ -19,6 +19,15 @@ When making a 2.5D game, for example, we need to create the feeling that the gam
 
 Doing it manually is a really easy option if you have few sprites that you are going to print but when in a game there are dozens of entities that we need to print, it becomes a nearly impossible task to do by hand, and that's where automatic sprite ordering systems help us.
 
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda1.png"></p>
+*zelda 2.5D game: in front of a tree*
+
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda2.png"></p>
+*zelda 2.5D game: behind a tree*
+
+<p align="center"><img src="https://github.com/sherzock/Sprite-Ordering-and-Camera-Culling/blob/gh-pages/web%20photos/zelda3.png"></p>
+*zelda 2.5D game: Y difference*
+
 ### How do we control the sprite ordering automaticlly in c++?
 
 There are many ways of controlling sprite ordering, but we are going to talk about one of the simplest ways of doing so. First of all we need to think about our game as a 3D game instead of a 2D game, with x,y and z axis. X and y axis will be easy to control because the sprites have width and height, the one that we want to focus on is the Z axis. 
@@ -112,7 +121,7 @@ Once we have the quadtree class we can start to implement it in the  camera cull
 
 ### Useful links
 
-**[Spatial partition:](https://www.youtube.com/watch?v=ELUZ60zZJzM)** In this video yyou will find a visual representation of how spatial partitioning works.
+**[Spatial partition:](https://www.youtube.com/watch?v=ELUZ60zZJzM)** In this video you will find a visual representation of how spatial partitioning works.
 
 **[Quadtree Demo:](https://google.github.io/closure-library/source/closure/goog/demos/quadtree.html)** In this website you will be able to play around with a representation of a quadtree.
 
@@ -121,19 +130,29 @@ Once we have the quadtree class we can start to implement it in the  camera cull
 ### Sprite Ordering
 
 [Depth sorting for game maker studio](https://forum.yoyogames.com/index.php?threads/depth-sorting-method-for-gms2-objects-sprites.42868/)
+
 [StackOverflow ddiscussion with sprite ordering idea](https://stackoverflow.com/questions/11002811/sorting-objects-by-y-value-before-rendering)
+
 [images of legend of zelda] (https://eliasdaler.wordpress.com/2013/11/20/z-order-in-top-down-2d-games/)
+
 [Cplusplus priority_queue wiki](http://www.cplusplus.com/reference/queue/priority_queue/)
+
 [cppreference priority_queue](https://en.cppreference.com/w/cpp/container/priority_queue)
+
 [Video: priority_queue explanation](https://www.youtube.com/watch?v=wptevk0bshY)
 
 ### Camera Culling
 
 [Camera culling](https://www.youtube.com/watch?v=zCaurIC49I4)
+
 [Spatial partition and quadtree idea](https://youtu.be/RN1GRX2ByLM)
+
 [Quadtree explanation and images](https://www.genbeta.com/desarrollo/teoria-de-colisiones-2d-quadtree)
+
 [Quadtree explanation and pseudocode](https://gamedevelopment.tutsplus.com/tutorials/quick-tip-use-quadtrees-to-detect-likely-collisions-in-2d-space--gamedev-374)
+
 [C++ Quadtree Class repository](https://github.com/MarcusMathiassen/P2D/tree/master/src)
+
 [Quadtree explanation](https://stackoverflow.com/questions/41946007/efficient-and-well-explained-implementation-of-a-quadtree-for-2d-collision-det)
 
 
