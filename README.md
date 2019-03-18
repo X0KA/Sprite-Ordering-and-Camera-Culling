@@ -41,7 +41,9 @@ To do that we will be using the standard template library, which is going to let
 The priority_queue will need 3 parameters:
 
 **1. Type of elements in the queue.**
+
 **2. Type of container to store the data.**
+
 **3. A binary predicate that takes two elements (of type T) as arguments and returns a bool.**
 
 the syntaxis will look something like that:
@@ -54,7 +56,9 @@ Before implementing our priority queue we will hae to create a class  that will 
 After doing that we will be able to implement the priority_queue with our 3 parameters:
 
 **1. The class that we created.**
+
 **2. A vecotr of the class that we created.**
+
 **3. The struct that we created with the boolean opperator.**
 
 With that we will be able to order our sprites, the only thing that is left to do is to create 2 functions.
