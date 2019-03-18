@@ -111,6 +111,16 @@ Once we have done that we will have our camera culling system implemented, the p
 
 In order to reduce that amount of operations we can implement something called space partitioning. Space partitioning is a tecnique based on the idea of dividing the space in small cells so then we can check only the entities that are in the same cell. In order to divide the cells into smaller pieces we will have to create a class called quadtree. Quadtrees are a type of space partitioning that will allow us to divide the space in 4 smoller fragments of equal parts in order to divide the space into even smaller pieces, this way we won't have the problem of having many entities in the smae quadtree if those are close enough because the quadtree will divde the space ins smaller cells to separate the entities.
 
+![QT tree](docs/QT%20tree.png)<br>
+<em>Quadtree ramifications represented</em>
+	
+![QT 1](docs/QT1.png)
+![QT 2](docs/QT2.png)
+![QT 3](docs/QT3.png)
+![QT 4](docs/QT4.png)
+![QT 5](docs/QT5.png)<br>
+<em>Quadtree visual representation</em>
+
 Inside the quadtree we will need 5 functions:
 
 **Clear():** This function deletes all the elements inside the nodes.
