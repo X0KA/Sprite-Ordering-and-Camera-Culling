@@ -118,7 +118,6 @@ In order to reduce that amount of operations we can implement something called s
 ![QT 2](docs/QT2.png)
 ![QT 3](docs/QT3.png)
 ![QT 4](docs/QT4.png)
-![QT 5](docs/QT5.png)
 <em>Quadtree visual representation</em>
 
 Inside the quadtree we will need 5 functions:
