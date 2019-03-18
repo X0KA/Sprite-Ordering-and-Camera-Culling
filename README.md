@@ -31,9 +31,9 @@ To do that we will be using the standard template library, which is going to let
 
 The priority_queue will need 3 parameters:
 
-* **1. Type of elements in the queue.**
-* **2. Type of container to store the data.**
-* **3. A binary predicate that takes two elements (of type T) as arguments and returns a bool.**
+**1. Type of elements in the queue.**
+**2. Type of container to store the data.**
+**3. A binary predicate that takes two elements (of type T) as arguments and returns a bool.**
 
 the syntaxis will look something like that:
 ```
@@ -44,9 +44,9 @@ Before implementing our priority queue we will hae to create a class  that will 
 
 After doing that we will be able to implement the priority_queue with our 3 parameters:
 
-* **1. The class that we created.**
-* **2. A vecotr of the class that we created.**
-* **3. The struct that we created with the boolean opperator.**
+**1. The class that we created.**
+**2. A vecotr of the class that we created.**
+**3. The struct that we created with the boolean opperator.**
 
 With that we will be able to order our sprites, the only thing that is left to do is to create 2 functions.
 The first function will have to create an element of the class we created and and push it into the priority queue.
@@ -90,4 +90,23 @@ else
 ```
 Once we have done that we will have our camera culling system implemented, the problem is that at this point it's not going to be really efficient because we are going to be checking if every element on the map is inside of the camera and if we have 1000 entities in the map, our game will have to do a lot of work.
 
-In order to reduce that amount of operations we can implement something called spatial ordering.
+In order to reduce that amount of operations we can implement something called space partitioning. Space partitioning is a tecnique based on the idea of dividing the space in small cells so then we can check only the entities that are in the same cell. In order to divide the cells into smaller pieces we will have to create a class called quadtree. Quadtrees are a type of space partitioning that will allow us to divide the space in 4 smoller fragments of equal parts in order to divide the space into even smaller pieces, this way we won't have the problem of having many entities in the smae quadtree if those are close enough because the quadtree will divde the space ins smaller cells to separate the entities.
+
+Inside the quadtree we will need 5 functions:
+
+**Clear():** This function deletes all the elements inside the nodes.
+**Split():**	This functions is in charge of dividing the actual node into 4 nodes when the actual node has reached it's maximum number of elements.
+**Insert():** This function inserts every element in it's corresponding node.
+**PushCollisionVector:** This function checks which elements the will have to be checked according to the element passed.
+**IfInside()** Checks if a rectangle is inside another one.
+
+Once we have the quadtree class we can start to implement it in the  camera culling, to do so, we have to Initialize a quadtree with a rect of the size of the map or the are where we want to  aply it. Then we have to insert all the entities and finally call the pushcollisionvector with the camera rectangle. This way, it will check which elements are inside the camera and it will return them in a list, and that list will be the elements that will have to be printed. 
+
+### Results
+
+
+
+### Useful links
+
+
+# Webgraphy
