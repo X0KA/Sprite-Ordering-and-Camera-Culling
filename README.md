@@ -5,7 +5,7 @@ I am [Jacobo Galofre](https://www.linkedin.com/in/jgalofre/), student of the [Ba
 
 # Sprite Ordering and Camera Culling
 
-In this website you will find information about how to create Sprite Ordering and Camera Culling effects for 2.5D game. You can also visit the main github repository page where you will be able to find 2 Visual Studio projects, 1 Withe the Camera Culling and Sprite Ordering systems fully implemented and another one with some parts missing to help you practice.
+In this website you will find information about how to create Sprite Ordering and Camera Culling effects for 2.5D game. You can also visit the main github repository page where you will be able to find 2 Visual Studio projects, 1 With the Camera Culling and Sprite Ordering systems fully implemented and another one with some parts missing to help you practice.
 
 ## Sprite Ordering
 
@@ -59,7 +59,7 @@ After doing that we will be able to implement the priority_queue with our 3 para
 
 **1. The class that we created.**
 
-**2. A vecotr of the class that we created.**
+**2. A vector of the class that we created.**
 
 **3. The struct that we created with the boolean opperator.**
 
@@ -81,19 +81,19 @@ Now we should be able to see our sprites rendered as we wanted.
 
 ### What is Camera Culling?
 
-Camera Culling is a technique used by game developers to optimize their games. Normally when we create a game for the first time we try to render everything in the level, map, arena, etc eventhough these there is stuff outside the camera, and that the player is not able to see. 
+Camera Culling is a technique used by game developers to optimize their games. Normally when we create a game for the first time we try to render everything in the level, map, arena, etc even though these there is stuff outside the camera, and that the player is not able to see. 
 
-What camera culling does is that reduces the what we render only to the things we can see in the camera, and the stuff that it's not visible for the user doesn`t render.
+What camera culling does is that reduces what we render only to the things we can see in the camera, and the stuff that it's not visible for the user doesn`t get rendered.
 
 ### Why is Camera Culling Important?
 
-As we mentioned before, Camera Culling is a way to optimize the game, by using this technique we are going to be able to increase the performance of our game as we are going to be loading less sprites and entities each cicle.
+As we mentioned before, Camera Culling is a way to optimize the game, by using this technique we are going to be able to increase the performance of our game as we are going to be loading less sprites and entities each cycle.
 
 ### How do we create a camera culling effect in our game?
 
 To create a camera culling effect in our game is pretty simple, we must have to select what we want to render. To do that we are just going to add a filter to our rendering system, this filter will check if something is outside the camera or not and once it has determined if its inside the camera or not, it will be rendered or not.
 
-In order to do that we will have to implement a filter similar to the next one and apply it to the render function or the function that pushes the elements into the priority class if you have done the sprite ordering system before:
+In order to do that we will have to implement a filter similar to the next one and apply it to the render function or the function that pushes the elements into the priority queue if you have done the sprite ordering system before:
 
 ```
 if ((rect.x < -camera.x + camera.w && rect.x + rect.w > -camera.x) || (rect.x < -camera.x + camera.w  && rect.x + rect.w > -camera.x))
@@ -111,7 +111,7 @@ else
 ```
 Once we have done that we will have our camera culling system implemented, the problem is that at this point it's not going to be really efficient because we are going to be checking if every element on the map is inside of the camera and if we have 1000 entities in the map, our game will have to do a lot of work.
 
-In order to reduce that amount of operations we can implement something called space partitioning. Space partitioning is a tecnique based on the idea of dividing the space in small cells so then we can check only the entities that are in the same cell. In order to divide the cells into smaller pieces we will have to create a class called quadtree. Quadtrees are a type of space partitioning that will allow us to divide the space in 4 smoller fragments of equal parts in order to divide the space into even smaller pieces, this way we won't have the problem of having many entities in the smae quadtree if those are close enough because the quadtree will divde the space ins smaller cells to separate the entities.
+In order to reduce that amount of operations we can implement something called space partitioning. Space partitioning is a tecnique based on the idea of dividing the space in small cells so then we can check only the entities that are in the same cell. In order to divide the cells into smaller pieces we will have to create a class called quadtree. Quadtrees are a type of space partitioning that will allow us to divide the space in 4 smaller fragments of equal parts in order to divide the space into even smaller pieces, this way we won't have the problem of having many entities in the smae quadtree if those are close enough because the quadtree will divide the space ins smaller cells to separate the entities.
 
 ![QT tree](docs/QT%20tree.png)<br>
 <em>Quadtree ramifications represented</em>
